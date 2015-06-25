@@ -1,2 +1,5 @@
 get accurate time of android devices:
-  adb shell 'echo $EPOCHREALTIME';
+  $ adb shell 'echo $EPOCHREALTIME';
+  
+get accurate time of Unix devices:
+  $ date +%s.%N
