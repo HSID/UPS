@@ -39,7 +39,7 @@ def removeIdentLine(inFile, outFile):
 
 @decorators.file_decorator
 @decorators.file_operation_extension_decorator
-def sortGSMVector(line):
+def reformGSMVector(line):
 	"""
 	sort the GSM vector according to the channel ID
 	"""
