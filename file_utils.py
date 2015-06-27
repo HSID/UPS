@@ -39,6 +39,20 @@ def removeIdentLine(inFile, outFile):
 
 @decorators.file_decorator
 @decorators.file_operation_extension_decorator
+def sortGSMVector(line):
+	"""
+	sort the GSM vector according to the channel ID
+	"""
+	segments = line.split()
+	segments = [item[(item.find(':') + 1):]\
+				if ':' in item\
+				else item\
+				for item in segments]
+
+	return (' '.join(segments) + '\n')
+
+@decorators.file_decorator
+@decorators.file_operation_extension_decorator
 def extractLine(line, lineID):
 	"""
 	"""
